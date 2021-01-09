@@ -1,0 +1,10 @@
+.card_div{
+    min-width: 70ch !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+@media (max-width: 600px){
+    .card_div{
+        min-width: 50ch !important;
+    }
+}

@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {Switch,Route} from 'react-router-dom'
+import CandidatePage from './pages/candidatepage/candidatepage.page'
+import HomePage from './pages/homepage/homepage.page'
+import ShortlistedPage from './pages/shortlisted/shortlistedpage.page'
+import RejectedPage from './pages/rejected/rejectedpage.page'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+  render(){
+    return(
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/shortlisted" component={ShortlistedPage} />
+        <Route exact path="/rejected" component={RejectedPage} />
+        <Route exact path="/:id" component={CandidatePage} />        
+      </Switch>
+    )
+  }
 }
 
 export default App;
