@@ -17,7 +17,7 @@ class CandidatePage extends React.Component{
             // eslint-disable-next-line
             let details = data.find(o=>o.id == match.params.id);
             this.setState({
-                name:details.name,image:details.image,id:details.id
+                name:details.name,image:details.Image,id:details.id
             })
         }).catch(err=>{
             console.log(err)
